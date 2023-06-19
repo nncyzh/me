@@ -19,11 +19,16 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
 
+# I think it will print "what","does", "this", "line", "do", "?" by repetitively calling the print function.
 for word in some_words:
     print(word)
+# It printed "what","does", "this", "line", "do", "?"
 
+# I think it will print "what","does", "this", "line", "do", "?" by repetitively calling the print function.
 for x in some_words:
     print(x)
+# It printed "what","does", "this", "line", "do", "?"
+
 
 print(some_words)
 
