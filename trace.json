@@ -1,8 +1,8 @@
 [
   "1",
   {
-    "of_total": 34,
-    "mark": 16,
+    "of_total": 35,
+    "mark": 30,
     "results": [
       {
         "value": 1,
@@ -41,43 +41,43 @@
         "name": "Exercise 0: adder - 0.1 + 0.9 = 1"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - you've => YOU'VE"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - got => GOT"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - to => TO"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - fight => FIGHT"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - for => FOR"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - your => YOUR"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - right => RIGHT"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - to => TO"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - party => PARTY"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout_with_a_number - hi, 1 => HI 1"
       },
       {
@@ -109,11 +109,15 @@
         "name": "Exercise 3: fix_it - it does not move, and it should not move"
       },
       {
-        "value": 0,
+        "value": 1,
+        "name": "Exercise 3: loops_1a - 1d for loop"
+      },
+      {
+        "value": 1,
         "name": "Exercise 3: loops_1c - 1d with arguments"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_2 - 10\u00d710 stars"
       },
       {
@@ -125,7 +129,7 @@
         "name": "Exercise 3: loops_4 - ten rising lists"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_5 - write the coords"
       },
       {
