@@ -159,7 +159,7 @@ def loops_3():
     for i in range(10):
         num_list =[]
         for j in range(10):
-            num_list.append(i)
+            num_list.append(str(i))
         num_field.append(num_list)
     return num_field
 
@@ -185,7 +185,7 @@ def loops_4():
     for i in range(10):
         num_list = []
         for j in range(10):
-            num_list.append(j)
+            num_list.append(str(j))
         num_block.append(num_list)
     return num_block
     
@@ -252,7 +252,7 @@ def loops_6():
     for i in range(10):
         row = []
         for j in range(i + 1):
-            row.append(j)
+            row.append(str(j))
         num_wedge.append(row)
     return num_wedge
 
@@ -282,7 +282,7 @@ def loops_7():
     for i in range(9):
         space = []
         for j in range(9):
-            space.append(i)
+            space.append(str(i))
         stars.append("*")
 
     return stars
