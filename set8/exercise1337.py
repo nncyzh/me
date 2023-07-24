@@ -291,37 +291,22 @@ def fast_filler(number_of_words=200) -> str:
     """
     import random
     import json
-    from typing import Dict
     fname = "dict_cache.json"
-    try:
-        with open(fname, "r") as file:
-            my_dict = json.load(file)
-    except FileNotFoundError:
-        # If the file doesn't exist, create the dictionary and cache it in a file
+    if os.path.exists(fname):
+        with open(fname, "r") as f:
+            my_dict = json.load(f)
+    else:
         my_dict = make_filler_text_dictionary()
-        with open(fname, "w") as file:
-            json.dump(my_dict, file)
-
+        with open(fname, "w") as f:
+            json.dump(my_dict, f)
+    word_lengths = list(my_dict.keys())
     words = []
-    word_counts = len(my_dict)
-
-    for _ in range(number_of_words):
-        num = random.randint(3, 7)  # Randomly select a number between 3 and 7 (inclusive)
-        if num in my_dict:
-            word_list = my_dict[num]
-            random_word = random.choice(word_list)  # Randomly pick a word from the list
-            random_length = random.randint(1, 10)  # Random word length (1 to 10 characters)
-            random_word = random_word[:random_length]  # Truncate the word to the random length
-            words.append(random_word)
-
-    # paragraph = (" ".join(words) + ".")
-    
-    # paragraph[0].upper()
-
-    # print(paragraph)
-
+    for i in range(number_of_words):
+        word_length = random.choice(word_lengths)
+        word = random.choice(my_dict[str(word_length)])
+        words.append(word)
+    words[0] = words [0].capitalize()
     return (" ".join(words) + ".")
-
 
 
 if __name__ == "__main__":

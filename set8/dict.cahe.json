@@ -1,0 +1,18 @@
+def make_filler_text_dictionary() -> Dict:
+    wd = {}
+    api_url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
+
+    for num in range(3, 8):
+        words_list = []
+        for _ in range(4): 
+            response = requests.get(f"{api_url}{num}")
+            if response.status_code == 200:
+                words_list.append(response.text)
+            else:
+                default_words = ['lorem', 'ipsum', 'dolor', 'sit']
+                words_list.extend(default_words[:4])
+                break
+
+        wd[num] = words_list
+
+    return wd
