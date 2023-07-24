@@ -22,11 +22,29 @@ def binary_search(low, high, actual_number):
     things much easier.
     """
     tries = 0
-    guess = 0
+    while low <= high:
+        guess = (low + high) // 2
+        print("Guess:", guess)
+        tries += 1
+        
+        if guess == actual_number:
+            return {"guess": guess, "tries": tries}
+        elif guess < actual_number:
+            low = guess + 1
+        else:
+            high = guess - 1
+    
+    return None  # The actual_number was not found in the range.
 
-    # Write your code in here
+# Example usage:
+low, high, actual_number = 1, 100, 42
+result = binary_search(low, high, actual_number)
 
-    return {"guess": guess, "tries": tries}
+if result:
+    print("Found the actual number:", result["guess"])
+    print("Number of tries:", result["tries"])
+else:
+    print("Number not found in the given range.")
 
 
 if __name__ == "__main__":

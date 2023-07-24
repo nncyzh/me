@@ -17,7 +17,10 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    my_range = []
+    for i in range(start, stop, step):
+        my_range.append(i)
+    return my_range
 
 
 def two_step_ranger(start, stop):
@@ -28,8 +31,10 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
-
+    two_ranger = []
+    for i in range(start, stop, 2):
+        two_ranger.append(i)
+    return two_ranger
 
 def stubborn_asker(low, high):
     """Ask for a number between low and high until actually given one.
@@ -39,7 +44,17 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
+
+    while True:
+        number = int(input(f"Enter a number between {low} and {high}: "))
+        
+        if low <= number <= high:
+            return number  # Return the number if it's within the range
+        else:
+            print("Number out of range. Try again.")
+
+    
+         
 
 
 def not_number_rejector(message):
@@ -49,7 +64,14 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    
+    while True:
+        try:
+            number = int(input("Enter a number between: "))
+            return number  # Return the number if it's within the range
+        except:
+            print("Number out of range. Try again.")
+
 
 
 def super_asker(low, high):
@@ -57,8 +79,26 @@ def super_asker(low, high):
 
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
-    """
-    return None
+    """     
+    while True:
+        try:
+            number = int(input("Enter a number between: "))
+            range = int(input(f"Enter a number between {low} and {high}: "))
+            if number == low:
+                return number 
+            elif number == high:
+                return number 
+            elif number > low and number < high:
+                return number
+            else:
+                print("Number out of range. Try again")
+        except:
+            print("Number out of range. Try again.")
+
+
+
+        
+    
 
 
 if __name__ == "__main__":
